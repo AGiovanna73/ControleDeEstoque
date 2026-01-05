@@ -21,9 +21,7 @@ public class Estoque {
         inicializarCategorias();
     }
 
-    // =========================
-    // GARANTE QUE TODAS AS CATEGORIAS EXISTAM
-    // =========================
+    
     private void inicializarCategorias() {
         for (String categoria : CATEGORIAS) {
             if (buscarItem(categoria) == null) {
@@ -33,9 +31,6 @@ public class Estoque {
         salvarArquivo();
     }
 
-    // =========================
-    // BUSCA ITEM POR CATEGORIA
-    // =========================
     private Itens buscarItem(String categoria) {
         for (Itens item : itens) {
             if (item.getCategoria().equalsIgnoreCase(categoria)) {
@@ -45,9 +40,7 @@ public class Estoque {
         return null;
     }
 
-    // =========================
-    // ADICIONAR AO ESTOQUE
-    // =========================
+    
     public void adicionar(String categoria, int quantidade) {
         Itens item = buscarItem(categoria);
 
@@ -57,9 +50,7 @@ public class Estoque {
         }
     }
 
-    // =========================
-    // REMOVER DO ESTOQUE (RETORNA BOOLEAN)
-    // =========================
+  
     public boolean remover(String categoria, int quantidade) {
 
         Itens item = buscarItem(categoria);
@@ -75,9 +66,7 @@ public class Estoque {
         return false; // erro (categoria inválida ou estoque insuficiente)
     }
 
-    // =========================
-    // EXIBIR ESTOQUE
-    // =========================
+    
     public void exibir() {
         System.out.println("\n=== ESTOQUE ATUAL ===");
         for (Itens item : itens) {
@@ -85,9 +74,7 @@ public class Estoque {
         }
     }
 
-    // =========================
-    // LER CSV
-    // =========================
+    
     private void lerArquivo() {
         try (BufferedReader br = new BufferedReader(new FileReader(ARQUIVO))) {
             String linha;
@@ -102,9 +89,7 @@ public class Estoque {
         }
     }
 
-    // =========================
-    // SALVAR CSV
-    // =========================
+   
     private void salvarArquivo() {
         try (PrintWriter pw = new PrintWriter(new FileWriter(ARQUIVO))) {
             for (Itens item : itens) {

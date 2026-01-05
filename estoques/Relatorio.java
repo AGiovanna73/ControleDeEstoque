@@ -38,9 +38,7 @@ public class Relatorio {
         }
     }
 
-    // =========================
-    // LER CSV SIMPLES (categoria,quantidade)
-    // =========================
+ 
     private static Map<String, Integer> lerCSV(String arquivo) {
 
         Map<String, Integer> dados = new HashMap<>();

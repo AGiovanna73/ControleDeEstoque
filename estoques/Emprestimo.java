@@ -22,9 +22,7 @@ public class Emprestimo {
         this.devolvido = false;
     }
 
-    // =========================
-    // GETTERS (OBRIGATÓRIOS)
-    // =========================
+    
     public String getCategoria() {
         return categoria;
     }
@@ -37,16 +35,12 @@ public class Emprestimo {
         return devolvido;
     }
 
-    // =========================
-    // REGRAS DE NEGÓCIO
-    // =========================
+   
     public boolean estaAtrasado() {
         return !devolvido && LocalDate.now().isAfter(dataDevolucao);
     }
 
-    // =========================
-    // FORMATO CSV
-    // =========================
+    
     public String toCSV() {
         return nome + "," + cpf + "," + categoria + "," +
                quantidade + "," + dataRetirada + "," +

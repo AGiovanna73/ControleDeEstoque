@@ -15,9 +15,7 @@ public class ControleEmprestimos {
         emprestimos = new ArrayList<>();
     }
 
-    // =========================
-    // REGISTRAR EMPRÉSTIMO
-    // =========================
+    
     public void registrar(Emprestimo e, Estoque estoque) {
 
         // remove do estoque primeiro
@@ -30,9 +28,7 @@ public class ControleEmprestimos {
         }
     }
 
-    // =========================
-    // LISTAR EMPRÉSTIMOS ATRASADOS
-    // =========================
+   
     public void listarAtrasados() {
         System.out.println("\n=== EMPRÉSTIMOS ATRASADOS ===");
 
@@ -50,9 +46,7 @@ public class ControleEmprestimos {
         }
     }
 
-    // =========================
-    // GERAR MAPA DE QUANTIDADE EMPRESTADA POR CATEGORIA
-    // =========================
+   
     public Map<String, Integer> calcularEmprestadosPorCategoria() {
 
         Map<String, Integer> emprestados = new HashMap<>();
@@ -68,9 +62,7 @@ public class ControleEmprestimos {
         return emprestados;
     }
 
-    // =========================
-    // SALVAR EM CSV
-    // =========================
+    
     private void salvar() {
         try (PrintWriter pw = new PrintWriter(new FileWriter(ARQUIVO))) {
             for (Emprestimo e : emprestimos) {
