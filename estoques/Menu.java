@@ -137,8 +137,9 @@ public class Menu {
         Emprestimo emprestimo = // Cria o objeto Emprestimo
                 new Emprestimo(nome, cpf, categoria, quantidade, dias);
 
-        controle.registrar(emprestimo, estoque);
+        controle.registrar(emprestimo, estoque);  // Envia para o ControleEmprestimos
     }
 }
+
 
 
