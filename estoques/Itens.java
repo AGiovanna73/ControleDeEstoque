@@ -20,9 +20,10 @@ public class Itens {
         this.quantidade = quantidade;
     }
 
-    // Formato padrão para CSV
+   // Converte o item para formato CSV
     @Override
     public String toString() {
         return categoria + "," + quantidade;
     }
 }
+
