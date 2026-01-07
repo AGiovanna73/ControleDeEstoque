@@ -27,7 +27,7 @@ public class Menu {
             System.out.print("Escolha uma opção: ");
 
             opcao = scanner.nextInt();
-            scanner.nextLine(); // limpar buffer
+            scanner.nextLine(); 
 
             switch (opcao) {
 
@@ -134,10 +134,11 @@ public class Menu {
             return;
         }
 
-        Emprestimo emprestimo =
+        Emprestimo emprestimo = // Cria o objeto Emprestimo
                 new Emprestimo(nome, cpf, categoria, quantidade, dias);
 
         controle.registrar(emprestimo, estoque);
     }
 }
+
 
